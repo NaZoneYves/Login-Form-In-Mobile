@@ -1,42 +1,15 @@
-# Exlogrn 🚀
+Weather Forecast App
+Welcome to the Weather Forecast App! This is a simple yet powerful application that provides real-time weather information for locations around the world. The app uses a third-party weather API to fetch current conditions, forecast, and other weather-related data.
 
-A starter app template for React Native Expo, featuring a ready-to-use login screen.
+Features
+Current Weather: Get real-time updates on the current weather conditions including temperature, humidity, wind speed, and more.
+7-Day Forecast: Access a detailed weather forecast for the next 7 days.
+Search by Location: Easily search for weather information in any city or region worldwide.
+Unit Conversion: Switch between Celsius and Fahrenheit for temperature display.
+User-Friendly Interface: Clean, intuitive design for seamless navigation and use.
 
-![AllScreens](assets/screenshot/snap.png)
-
-## About ✔️
-
-What can you do with this template 🤔
-
-- Log in with an email address and password.
-- Create an account with a name, email address and password.
-- Sign out.
-
-This template is a good way to start an application with a system of connection, disconnection, and creation of an account.  
-You will just need to adapt it according to your needs.
-
-![Made-In-Senegal](https://github.com/GalsenDev221/made.in.senegal/blob/master/assets/badge.svg)
-
-## Usage ℹ️
-
-Click on the **[Use this template](https://github.com/daoodaba975/exlogrn/generate)** button on this page to clone this respository to your GitHub account or you can clone this respository.
-
-- Install dependencies
-
-```bash
-yarn install
-```
-
-- Start the app
-
-```bash
-npx expo start
-```
-
-You can take a look on Expo's [docs](https://docs.expo.dev).
-
-### Licence 🚨
-
-This template is released under the **[MIT License](LICENSE.md)**.
-
-Enjoy ✌🏽
+How to Use
+Upon launching the app, it will display the weather for your current location (if location services are enabled).
+Use the search bar to type the name of any city to get the weather forecast for that location.
+Toggle between Celsius and Fahrenheit using the temperature switch.
+View detailed weather conditions for the next 7 days in the forecast section.
