@@ -1,39 +1,38 @@
 import React from "react";
-import { Provider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
+import BookListScreen from "./app/screens/BookList";
+import DashboardScreen from "./app/screens/Dashboard";
 
-import { theme } from "./app/core/theme";
-import {
-  StartScreen,
-  LoginScreen,
-  RegisterScreen,
-  ResetPasswordScreen,
-  HomeScreen,
-} from "./app/screens";
+import AddBookScreen from "./app/screens/AddBook";
+import EditBookScreen from "./app/screens/EditBook";
 
 const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
-    <Provider theme={theme}>
+    <ScrollView contentContainerStyle={styles.container}>
       <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="StartScreen"
-          screenOptions={{
-            headerShown: false,
-          }}
-        >
-          <Stack.Screen name="StartScreen" component={StartScreen} />
-          <Stack.Screen name="LoginScreen" component={LoginScreen} />
-          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen
-            name="ResetPasswordScreen"
-            component={ResetPasswordScreen}
-          />
+        <Stack.Navigator>
+        
+          <Stack.Screen name="BookList" component={BookListScreen} />
+
+          {/* <Stack.Screen name="BookDetail" component={BookDetailScreen} /> */}
+          <Stack.Screen name="AddBook" component={AddBookScreen} />
+          <Stack.Screen name="EditBook" component={EditBookScreen} />
+          <Stack.Screen name="Dashboard" component={DashboardScreen} />
         </Stack.Navigator>
       </NavigationContainer>
-    </Provider>
+    </ScrollView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1, // Đảm bảo ScrollView chiếm toàn bộ không gian cần thiết
+    backgroundColor: "#f9f9f9",
+  },
+});
+
+export default App;
